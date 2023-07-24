@@ -1,0 +1,26 @@
+[
+    {
+        "id": "10118",
+        "title": "Точка доступу MikroTik RBwAPG-5HacD2HnD-BE Black",
+        "price": "3515",
+        "aviability": "InStock"
+    },
+    {
+        "id": "10412",
+        "title": "Точка доступу MikroTik RBwAPG-60adkit",
+        "price": "7209",
+        "aviability": "InStock"
+    },
+    {
+        "id": "10119",
+        "title": "Точка доступу MikroTik RBwAPG-5HacD2HnD",
+        "price": "3515",
+        "aviability": "InStock"
+    },
+    {
+        "id": "10413",
+        "title": "Точка доступу MikroTik RBGrooveGA-52HPacn",
+        "price": "3665",
+        "aviability": "InStock"
+    }
+]

@@ -1,0 +1,292 @@
+Domain,Whois Information
+Domain,"{
+  ""domain_name"": null,
+  ""registrar"": null,
+  ""whois_server"": null,
+  ""referral_url"": null,
+  ""updated_date"": null,
+  ""creation_date"": null,
+  ""expiration_date"": null,
+  ""name_servers"": null,
+  ""status"": null,
+  ""emails"": null,
+  ""dnssec"": null,
+  ""name"": null,
+  ""org"": null,
+  ""address"": null,
+  ""city"": null,
+  ""state"": null,
+  ""registrant_postal_code"": null,
+  ""country"": null
+}"
+thehost.ua,"{
+  ""domain_name"": ""thehost.ua"",
+  ""status"": [
+    ""clientDeleteProhibited"",
+    ""linked"",
+    ""clientUpdateProhibited"",
+    ""clientTransferProhibited""
+  ],
+  ""registrar"": ""\u0424\u041e\u041f \u0421\u0454\u0434\u0456\u043d\u043a\u0456\u043d \u041e\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440 \u0412\u0430\u043b\u0435\u0440\u0456\u0439\u043e\u0432\u0438\u0447"",
+  ""registrar_name"": ""ua.thehost"",
+  ""registrar_url"": ""https://thehost.ua"",
+  ""registrar_country"": ""UA"",
+  ""registrar_city"": ""Boyarka"",
+  ""registrar_address"": ""Ukraine 08154 Boyarka P/B 308"",
+  ""registrar_email"": ""abuse@thehost.ua"",
+  ""registrant_name"": ""\u0425\u043e\u0441\u0442\u0438\u043d\u0433 \u043f\u0440\u043e\u0432\u0430\u0439\u0434\u0435\u0440 TheHost"",
+  ""registrant_country"": ""UA"",
+  ""registrant_city"": ""\u0411\u043e\u044f\u0440\u043a\u0430"",
+  ""registrant_state"": ""\u041a\u0438\u0435\u0432\u0441\u043a\u0430\u044f"",
+  ""registrant_address"": ""not published"",
+  ""registrant_email"": ""not published"",
+  ""registrant_postal_code"": ""08154"",
+  ""registrant_phone"": ""not published"",
+  ""registrant_fax"": ""+380.442229888"",
+  ""admin"": ""\u0425\u043e\u0441\u0442\u0438\u043d\u0433 \u043f\u0440\u043e\u0432\u0430\u0439\u0434\u0435\u0440 TheHost"",
+  ""admin_country"": ""UA"",
+  ""admin_city"": ""\u0411\u043e\u044f\u0440\u043a\u0430"",
+  ""admin_state"": ""\u041a\u0438\u0435\u0432\u0441\u043a\u0430\u044f"",
+  ""admin_address"": ""not published"",
+  ""admin_email"": ""not published"",
+  ""admin_postal_code"": ""08154"",
+  ""admin_phone"": ""not published"",
+  ""admin_fax"": ""+380.442229888"",
+  ""updated_date"": [
+    ""2022-07-21 14:59:13"",
+    ""2018-05-19 14:08:26"",
+    ""2015-11-29 21:59:27"",
+    ""2022-05-24 22:11:06""
+  ],
+  ""creation_date"": [
+    ""2013-04-17 11:05:27"",
+    ""2014-03-31 17:46:13"",
+    ""2014-03-31 17:09:10"",
+    ""2014-03-31 17:09:22""
+  ],
+  ""expiration_date"": ""2030-04-17 11:05:27"",
+  ""name_servers"": [
+    ""ns1.thehost.ua"",
+    ""ns2.thehost.ua"",
+    ""ns3.thehost.ua"",
+    ""ns4.thehost.ua""
+  ]
+}"
+hostinger.com.ua,"{
+  ""domain_name"": ""hostinger.com.ua"",
+  ""status"": [
+    ""ok"",
+    ""linked""
+  ],
+  ""registrar"": ""MARCARIA.COM LLC"",
+  ""registrar_name"": ""ua.marcaria"",
+  ""registrar_url"": ""http://www.marcaria.com"",
+  ""registrar_country"": ""US"",
+  ""registrar_city"": ""Miami"",
+  ""registrar_address"": ""33195 Miami 8345 NW 66 ST#B1673"",
+  ""registrar_email"": ""abuse@marcaria.com"",
+  ""registrant_name"": ""HOSTINGER, UAB"",
+  ""registrant_country"": ""US"",
+  ""registrant_city"": ""Wilmington"",
+  ""registrant_state"": ""DE"",
+  ""registrant_address"": ""not published"",
+  ""registrant_email"": ""not published"",
+  ""registrant_postal_code"": ""19809"",
+  ""registrant_phone"": ""not published"",
+  ""registrant_fax"": null,
+  ""admin"": ""Marcaria.com LLC"",
+  ""admin_country"": ""US"",
+  ""admin_city"": ""Wilmington"",
+  ""admin_state"": ""DE"",
+  ""admin_address"": ""501 Silverside Road, Suite 105"",
+  ""admin_email"": ""domains@marcaria.com"",
+  ""admin_postal_code"": ""19809"",
+  ""admin_phone"": ""+1.3054348621"",
+  ""admin_fax"": null,
+  ""updated_date"": [
+    ""2022-06-05 17:09:01"",
+    ""2020-09-24 18:55:47""
+  ],
+  ""creation_date"": [
+    ""2007-05-06 17:05:31"",
+    ""2020-09-24 18:55:23"",
+    ""2018-07-17 21:11:38""
+  ],
+  ""expiration_date"": ""2023-05-06 17:05:31"",
+  ""name_servers"": [
+    ""any1.hostinger.com"",
+    ""any2.hostinger.com""
+  ]
+}"
+wifi-ax.com,"{
+  ""domain_name"": ""WIFI-AX.COM"",
+  ""registrar"": ""Internet Domain Service BS Corp"",
+  ""whois_server"": ""whois.internet.bs"",
+  ""referral_url"": null,
+  ""updated_date"": ""2022-12-02 04:30:11"",
+  ""creation_date"": ""2020-12-16 17:25:55"",
+  ""expiration_date"": ""2023-12-16 17:25:55"",
+  ""name_servers"": [
+    ""NS-CANADA.TOPDNS.COM"",
+    ""NS-UK.TOPDNS.COM"",
+    ""NS-USA.TOPDNS.COM""
+  ],
+  ""status"": ""clientTransferProhibited https://icann.org/epp#clientTransferProhibited"",
+  ""emails"": ""abuse@internet.bs"",
+  ""dnssec"": ""unsigned"",
+  ""name"": null,
+  ""org"": null,
+  ""address"": null,
+  ""city"": null,
+  ""state"": null,
+  ""registrant_postal_code"": null,
+  ""country"": null
+}"
+nkrzi.gov.ua,"{
+  ""domain_name"": ""nkrzi.gov.ua"",
+  ""status"": ""OK-UNTIL 20240105155319"",
+  ""registrar"": null,
+  ""registrar_name"": null,
+  ""registrar_url"": null,
+  ""registrar_country"": null,
+  ""registrar_city"": null,
+  ""registrar_address"": null,
+  ""registrar_email"": null,
+  ""registrant_name"": null,
+  ""registrant_country"": null,
+  ""registrant_city"": null,
+  ""registrant_state"": null,
+  ""registrant_address"": null,
+  ""registrant_email"": null,
+  ""registrant_postal_code"": null,
+  ""registrant_phone"": null,
+  ""registrant_fax"": null,
+  ""admin"": null,
+  ""admin_country"": null,
+  ""admin_city"": null,
+  ""admin_state"": null,
+  ""admin_address"": null,
+  ""admin_email"": null,
+  ""admin_postal_code"": null,
+  ""admin_phone"": null,
+  ""admin_fax"": null,
+  ""updated_date"": null,
+  ""creation_date"": ""0-UANIC 20120105155320"",
+  ""expiration_date"": null,
+  ""name_servers"": [
+    ""centre.ucrf.gov.ua"",
+    ""mail.ucrf.gov.ua""
+  ]
+}"
+ua.gecid.com,"{
+  ""domain_name"": ""GECID.COM"",
+  ""registrar"": ""PDR Ltd. d/b/a PublicDomainRegistry.com"",
+  ""whois_server"": ""whois.publicdomainregistry.com"",
+  ""referral_url"": null,
+  ""updated_date"": [
+    ""2022-07-07 08:13:51"",
+    ""2022-07-07 08:13:52""
+  ],
+  ""creation_date"": ""2009-08-04 06:00:07"",
+  ""expiration_date"": ""2024-08-04 06:00:07"",
+  ""name_servers"": [
+    ""BART.NS.CLOUDFLARE.COM"",
+    ""TESS.NS.CLOUDFLARE.COM"",
+    ""bart.ns.cloudflare.com"",
+    ""tess.ns.cloudflare.com""
+  ],
+  ""status"": ""clientTransferProhibited https://icann.org/epp#clientTransferProhibited"",
+  ""emails"": [
+    ""abuse-contact@publicdomainregistry.com"",
+    ""alexvd75@gmail.com""
+  ],
+  ""dnssec"": [
+    ""unsigned"",
+    ""Unsigned""
+  ],
+  ""name"": ""Aleksandr Chernoivan"",
+  ""org"": null,
+  ""address"": ""ul. Malinovskogo 60/230"",
+  ""city"": ""Dnepropetrovsk"",
+  ""state"": ""UA"",
+  ""registrant_postal_code"": ""49034"",
+  ""country"": ""UA""
+}"
+internetua.com,"{
+  ""domain_name"": ""INTERNETUA.COM"",
+  ""registrar"": ""Internet Invest, Ltd. dba Imena.ua"",
+  ""whois_server"": ""whois.imena.ua"",
+  ""referral_url"": null,
+  ""updated_date"": [
+    ""2022-09-22 05:44:09"",
+    ""2022-09-22 05:44:10""
+  ],
+  ""creation_date"": ""2003-01-22 15:59:58"",
+  ""expiration_date"": ""2024-01-22 15:59:58"",
+  ""name_servers"": [
+    ""DELL.NS.CLOUDFLARE.COM"",
+    ""ZAHIR.NS.CLOUDFLARE.COM"",
+    ""dell.ns.cloudflare.com"",
+    ""zahir.ns.cloudflare.com""
+  ],
+  ""status"": ""clientTransferProhibited https://icann.org/epp#clientTransferProhibited"",
+  ""emails"": [
+    ""abuse@imena.ua"",
+    ""hostmaster@imena.ua""
+  ],
+  ""dnssec"": [
+    ""unsigned"",
+    ""Unsigned""
+  ],
+  ""name"": ""Whois privacy protection service"",
+  ""org"": ""Internet Invest, Ltd. dba Imena.ua"",
+  ""address"": ""Gaidara, 50 st."",
+  ""city"": ""Kyiv"",
+  ""state"": ""Kyiv"",
+  ""registrant_postal_code"": ""01033"",
+  ""country"": ""UA""
+}"
+hi-tech.ua,"{
+  ""domain_name"": ""hi-tech.ua"",
+  ""status"": [
+    ""ok"",
+    ""linked""
+  ],
+  ""registrar"": ""\u0422\u041e\u0412 \""\u0406\u0426 \u0415\u041b\u0412\u0406\u0421\u0422\u0406\"""",
+  ""registrar_name"": ""ua.visti"",
+  ""registrar_url"": ""http://www.visti.net/"",
+  ""registrar_country"": ""UA"",
+  ""registrar_city"": ""Kyiv"",
+  ""registrar_address"": ""Ukraine 02125 Kyiv Shymanovskogo str. 2/1"",
+  ""registrar_email"": ""abuse@visti.net"",
+  ""registrant_name"": ""\u0422\u041e\u0412 \""\u0406\u0426 \u0415\u041b\u0412\u0406\u0421\u0422\u0406\"""",
+  ""registrant_country"": ""UA"",
+  ""registrant_city"": null,
+  ""registrant_state"": ""\u041a\u0418\u0407\u0412"",
+  ""registrant_address"": ""not published"",
+  ""registrant_email"": ""not published"",
+  ""registrant_postal_code"": ""03037"",
+  ""registrant_phone"": ""not published"",
+  ""registrant_fax"": null,
+  ""admin"": ""\u0422\u041e\u0412 \""\u0406\u0426 \u0415\u041b\u0412\u0406\u0421\u0422\u0406\"""",
+  ""admin_country"": ""UA"",
+  ""admin_city"": null,
+  ""admin_state"": ""\u041a\u0418\u0407\u0412"",
+  ""admin_address"": ""not published"",
+  ""admin_email"": ""not published"",
+  ""admin_postal_code"": ""03037"",
+  ""admin_phone"": ""not published"",
+  ""admin_fax"": null,
+  ""updated_date"": ""2022-11-15 13:12:44"",
+  ""creation_date"": [
+    ""2006-12-12 19:23:42"",
+    ""2014-03-31 17:29:31"",
+    ""2014-03-31 17:27:44"",
+    ""2014-03-31 17:27:07""
+  ],
+  ""expiration_date"": ""2023-12-12 19:23:42"",
+  ""name_servers"": [
+    ""graham.ns.cloudflare.com"",
+    ""jean.ns.cloudflare.com""
+  ]
+}"

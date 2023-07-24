@@ -1,0 +1,98 @@
+[
+    {
+        "id": "20131",
+        "title": "Точка доступу Ubiquiti UF-AE",
+        "price": "1355",
+        "aviability": "InStock"
+    },
+    {
+        "id": "10412",
+        "title": "Точка доступу MikroTik RBwAPG-60adkit",
+        "price": "7209",
+        "aviability": "InStock"
+    },
+    {
+        "id": "20024",
+        "title": "Подовжувач Legrand Стандарт 4х2К+З р 1.5 м (694554)",
+        "price": "1199",
+        "aviability": "InStock"
+    },
+    {
+        "id": "20137",
+        "title": "Точка доступу MikroTik RBwAPGR-5HacD2HnD&R11e-LTE",
+        "price": "6815",
+        "aviability": "InStock"
+    },
+    {
+        "id": "15922",
+        "title": "Жорсткий диск внутрішній Western Digital Red 4TB 5400 rpm 256 MB 3.5 SATA III (WD40EFAX)",
+        "price": "3629",
+        "aviability": "InStock"
+    },
+    {
+        "id": "10119",
+        "title": "Точка доступу MikroTik RBwAPG-5HacD2HnD",
+        "price": "3515",
+        "aviability": "InStock"
+    },
+    {
+        "id": "10413",
+        "title": "Точка доступу MikroTik RBGrooveGA-52HPacn",
+        "price": "3665",
+        "aviability": "InStock"
+    },
+    {
+        "id": "16739",
+        "title": "Точка доступу MikroTik RBLDFR&R11e-LTE6",
+        "price": "6459",
+        "aviability": "InStock"
+    },
+    {
+        "id": "10118",
+        "title": "Точка доступу MikroTik RBwAPG-5HacD2HnD-BE Black",
+        "price": "3515",
+        "aviability": "InStock"
+    },
+    {
+        "id": "20070",
+        "title": "Мережевий фільтр Maxxter SPM5-G-6В чорний, 1.8 м кабель, 5 розеток",
+        "price": "199",
+        "aviability": "InStock"
+    },
+    {
+        "id": "20068",
+        "title": "Сетевой фильтр Maxxter SPM5-G-6G, 1,8 м кабель, 5 розеток, сірий",
+        "price": "199",
+        "aviability": "InStock"
+    },
+    {
+        "id": "20069",
+        "title": "Мережевий фільтр Maxxter SPM5-G-15G Grey, 4.5m, 5 розеток",
+        "price": "249",
+        "aviability": "InStock"
+    },
+    {
+        "id": "20072",
+        "title": "Мережевий фільтр Maxxter SPM5-G-15B чорний, 4.5 м кабель, 5 розеток",
+        "price": "249",
+        "aviability": "InStock"
+    },
+    {
+        "id": "20073",
+        "title": "Мережевий фільтр Maxxter SPM5-G-10G, 3м кабель, 5 розеток",
+        "price": "219",
+        "aviability": "InStock"
+    },
+    {
+        "id": "20071",
+        "title": "Мережевий фільтр Maxxter SPM5-G-10B чорний, 3 м кабель, 5 розеток",
+        "price": "219",
+        "aviability": "InStock"
+    },
+    {
+        "id": "20077",
+        "title": "Мережевий фільтр Maxxter SPM3-G-15G 3 розетки, 4.5m White",
+        "price": "239",
+        "aviability": "InStock"
+    }
+]
