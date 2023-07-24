@@ -158,9 +158,9 @@ def get_cat_html_ru():
                 sku = 'ERROR'
 
 
-            control_range = test_pars_capitalize(soup=soup, name='Диапазон регулирования, А')
-            contactor_rated_current = test_pars_capitalize(soup=soup, name='Номинальный ток контактора, А')
-            contactor_series = test_pars_capitalize(soup=soup, name='Серия контактора')
+            control_range = test_pars(soup=soup, name='Диапазон регулирования, А')
+            contactor_rated_current = test_pars(soup=soup, name='Номинальный ток контактора, А')
+            contactor_series = test_pars(soup=soup, name='Серия контактора')
 
 
             #         Опис товару
