@@ -80,6 +80,7 @@ def get_cat_html_ru():
             all_product_links.extend(product_urls)
         #  Збір даних про товари
         for product_url in all_product_links:
+            check_internet_and_continue()
             images = []
             driver.get(url=product_url)
             time.sleep(3)
@@ -267,6 +268,7 @@ def get_cat_html_ru():
 
 
 def main():
+    check_internet_and_continue()
     product_data = get_cat_html_ru()
     play_sound()
 

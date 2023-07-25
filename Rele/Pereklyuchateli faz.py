@@ -7,7 +7,6 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-import winsound
 from Functions import *
 
 
@@ -24,10 +23,6 @@ options.add_argument(HEADERS)
 driver = webdriver.Chrome()
 
 
-def play_sound():
-    frequency = 500
-    duration = 1000
-    winsound.Beep(frequency, duration)
 
 def get_cat_html_ru():
     ua_links_list = []
