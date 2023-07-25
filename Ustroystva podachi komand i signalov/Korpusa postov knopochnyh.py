@@ -15,7 +15,7 @@ HEADERS = {
                   '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
 
-url = 'https://001.com.ua/svetosignalnaya-armatura'
+url = 'https://001.com.ua/korpusa-postov-knopochnyh'
 options = webdriver.ChromeOptions()
 options.add_argument('--disable-blink-features=AutomationControlled')
 options.add_argument(HEADERS)
@@ -154,11 +154,8 @@ def get_cat_html_ru():
             except AttributeError:
                 sku = 'ERROR'
 
-            nominal_voltage = test_pars(soup=soup, name='Номинальное рабочее напряжение, В')
-            backlight_type = test_pars_capitalize(soup=soup, name='Тип источника света')
+            num_of_places = test_pars_capitalize(soup=soup, name='Количество мест')
             color = test_pars_capitalize(soup=soup, name='Цвет')
-            mounting_hole_diameter = test_pars(soup=soup, name='Диаметр монтажного отверстия, мм')
-            material = test_pars_capitalize(soup=soup, name='Материал корпуса')
 
 
 
@@ -215,7 +212,7 @@ def get_cat_html_ru():
                 'Украинский slug': '',
                 'images': images_str,
                 'item_name': title,
-                'category_name': 'Светосигнальная арматура',
+                'category_name': 'Корпуса постов кнопочных',
                 'manufacturer_name': brand,
                 'sku': sku,
                 'model': sku,
@@ -227,17 +224,15 @@ def get_cat_html_ru():
                 'Русский description': descr,
                 'Украинский title': title_ua,
                 'Украинский description': descr_ua,
-                'Номинальное напряжение': f'Русский ~ {nominal_voltage}',
-                'Тип источника света': f'Русский ~ {backlight_type}',
-                'Цвет': f'Русский ~ {color}',
-                'Диаметр монтажного отверстия': f'Русский ~ {mounting_hole_diameter}',
-                'Материал': f'Русский ~ {material}',
+                'Количество мест': f'Русский ~ {num_of_places}',
+                'Цвет товара': f'Русский ~ {color}',
+
 
             })
             driver.find_element(By.XPATH, '/html/body/header/nav/div/div[2]/ul[2]/li[1]/a/span[1]').click()
             time.sleep(2)
 
-        with open('svetosignalnaya-armatura.csv', 'w', newline='', encoding='utf-8-sig') as f:
+        with open('korpusa-postov-knopochnyh.csv', 'w', newline='', encoding='utf-8-sig') as f:
             writer = csv.DictWriter(f, fieldnames=['URL',
                                                    'product_id',
                                                    'Русский slug',
@@ -256,11 +251,9 @@ def get_cat_html_ru():
                                                    'Русский description',
                                                    'Украинский title',
                                                    'Украинский description',
-                                                   'Номинальное напряжение',
-                                                   'Тип источника света',
-                                                   'Цвет',
-                                                   'Диаметр монтажного отверстия',
-                                                   'Материал',
+                                                   'Количество мест',
+                                                   'Цвет товара',
+
                                                    ])
             writer.writeheader()
             for element in data:
