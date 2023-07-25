@@ -15,7 +15,7 @@ HEADERS = {
                   '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
 
-url = 'https://001.com.ua/magistralnye-kabel-kanaly-koroba?filters=416-1996-1995'
+url = 'https://001.com.ua/perforirovannye-kabel-kanaly-koroba'
 options = webdriver.ChromeOptions()
 options.add_argument('--disable-blink-features=AutomationControlled')
 options.add_argument(HEADERS)
@@ -154,13 +154,11 @@ def get_cat_html_ru():
             except AttributeError:
                 sku = 'ERROR'
 
-            device_type = test_pars_capitalize(soup=soup, name='Тип')
-            size = test_pars_capitalize(soup=soup, name='Размер кабель-канала, Ш×В, мм')
-            if size == 'Любой':
-                size = ''
+            width = test_pars_capitalize(soup=soup, name='Ширина, мм')
+            height = test_pars_capitalize(soup=soup, name='Высота, мм')
+            length_mm = test_pars_capitalize(soup=soup, name='Длина, мм')
             color = test_pars_capitalize(soup=soup, name='Цвет')
-            if color == 'Слоновая кость':
-                color = 'Белый'
+
 
 
 
@@ -217,7 +215,7 @@ def get_cat_html_ru():
                 'Украинский slug': '',
                 'images': images_str,
                 'item_name': title,
-                'category_name': 'Другие аксессуары для короба',
+                'category_name': 'Перфорированные кабель-каналы (короба)',
                 'manufacturer_name': brand,
                 'sku': sku,
                 'model': sku,
@@ -229,8 +227,9 @@ def get_cat_html_ru():
                 'Русский description': descr,
                 'Украинский title': title_ua,
                 'Украинский description': descr_ua,
-                'Тип': f'Русский ~ {device_type}',
-                'Размер': f'Русский ~ {size}',
+                'Ширина': f'Русский ~ {width}',
+                'Высота': f'Русский ~ {height}',
+                'Длина': f'Русский ~ {length_mm}',
                 'Цвет товара': f'Русский ~ {color}',
 
 
@@ -258,8 +257,9 @@ def get_cat_html_ru():
                                                    'Русский description',
                                                    'Украинский title',
                                                    'Украинский description',
-                                                   'Тип',
-                                                   'Размер',
+                                                   'Ширина',
+                                                   'Высота',
+                                                   'Длина',
                                                    'Цвет товара',
                                                    ])
             writer.writeheader()

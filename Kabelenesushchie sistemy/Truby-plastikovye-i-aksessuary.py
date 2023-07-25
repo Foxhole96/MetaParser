@@ -15,7 +15,7 @@ HEADERS = {
                   '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
 
-url = 'https://001.com.ua/magistralnye-kabel-kanaly-koroba?filters=416-1996-1995'
+url = 'https://e-server.com.ua/truba-gladkaya-pvc'
 options = webdriver.ChromeOptions()
 options.add_argument('--disable-blink-features=AutomationControlled')
 options.add_argument(HEADERS)
@@ -155,12 +155,8 @@ def get_cat_html_ru():
                 sku = 'ERROR'
 
             device_type = test_pars_capitalize(soup=soup, name='Тип')
-            size = test_pars_capitalize(soup=soup, name='Размер кабель-канала, Ш×В, мм')
-            if size == 'Любой':
-                size = ''
-            color = test_pars_capitalize(soup=soup, name='Цвет')
-            if color == 'Слоновая кость':
-                color = 'Белый'
+            diametr = test_pars_capitalize(soup=soup, name='Внешний диаметр трубы, мм')
+
 
 
 
@@ -217,7 +213,7 @@ def get_cat_html_ru():
                 'Украинский slug': '',
                 'images': images_str,
                 'item_name': title,
-                'category_name': 'Другие аксессуары для короба',
+                'category_name': 'Труба гладкая ПВХ',
                 'manufacturer_name': brand,
                 'sku': sku,
                 'model': sku,
@@ -230,16 +226,12 @@ def get_cat_html_ru():
                 'Украинский title': title_ua,
                 'Украинский description': descr_ua,
                 'Тип': f'Русский ~ {device_type}',
-                'Размер': f'Русский ~ {size}',
-                'Цвет товара': f'Русский ~ {color}',
-
-
-
+                'Диаметр': f'Русский ~ {diametr}',
             })
             driver.find_element(By.XPATH, '/html/body/header/nav/div/div[2]/ul[2]/li[1]/a/span[1]').click()
             time.sleep(2)
 
-        with open('drugie-aksessuary-dlja-koroba.csv', 'w', newline='', encoding='utf-8-sig') as f:
+        with open('truba-gladkaya-pvc.csv', 'w', newline='', encoding='utf-8-sig') as f:
             writer = csv.DictWriter(f, fieldnames=['URL',
                                                    'product_id',
                                                    'Русский slug',
@@ -259,8 +251,8 @@ def get_cat_html_ru():
                                                    'Украинский title',
                                                    'Украинский description',
                                                    'Тип',
-                                                   'Размер',
-                                                   'Цвет товара',
+                                                   'Диаметр',
+
                                                    ])
             writer.writeheader()
             for element in data:
