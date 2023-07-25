@@ -15,7 +15,7 @@ HEADERS = {
                   '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
 
-url = 'https://001.com.ua/pereklyuchateli-tumblery-manipulyatory'
+url = 'https://001.com.ua/svetosignalnaya-armatura'
 options = webdriver.ChromeOptions()
 options.add_argument('--disable-blink-features=AutomationControlled')
 options.add_argument(HEADERS)
@@ -154,21 +154,13 @@ def get_cat_html_ru():
             except AttributeError:
                 sku = 'ERROR'
 
-            device_type = test_pars_capitalize(soup=soup, name='Тип')
-            num_of_positions = test_pars_capitalize(soup=soup, name='Количество положений')
-            type_of_contacts = test_pars_capitalize(soup=soup, name='Количество и вид контактов')
+            nominal_voltage = test_pars_capitalize(soup=soup, name='Номинальное рабочее напряжение, В')
+            backlight_type = test_pars_capitalize(soup=soup, name='Тип источника света')
             color = test_pars_capitalize(soup=soup, name='Цвет')
-            if color == 'Хром':
-                color = 'Серый'
-            elif color == 'Прозрачный':
-                color = 'Белый'
-            else:
-                color = color
-            backlight = test_pars(soup=soup, name='Наличие подсветки')
             mounting_hole_diameter = test_pars(soup=soup, name='Диаметр монтажного отверстия, мм')
+            material = test_pars(soup=soup, name='Материал корпуса')
 
 
-            #         Опис товару
 
             try:
                 descr = soup.find('div', class_='product-description copyright')
@@ -215,6 +207,7 @@ def get_cat_html_ru():
             except AttributeError:
                 descr_ua = ''
 
+
             data.append({
                 'URL': product_url,
                 'product_id': 'new',
@@ -222,7 +215,7 @@ def get_cat_html_ru():
                 'Украинский slug': '',
                 'images': images_str,
                 'item_name': title,
-                'category_name': 'Переключатели, тумблеры, манипуляторы',
+                'category_name': 'Светосигнальная арматура',
                 'manufacturer_name': brand,
                 'sku': sku,
                 'model': sku,
@@ -234,18 +227,17 @@ def get_cat_html_ru():
                 'Русский description': descr,
                 'Украинский title': title_ua,
                 'Украинский description': descr_ua,
-                'Тип': f'Русский ~ {device_type}',
-                'Количество положений': f'Русский ~ {num_of_positions}',
-                'Количество и вид контактов': f'Русский ~ {type_of_contacts}',
+                'Номинальное напряжение': f'Русский ~ {nominal_voltage}',
+                'Тип источника света': f'Русский ~ {backlight_type}',
                 'Цвет': f'Русский ~ {color}',
-                'Наличие подсветки': f'Русский ~ {backlight}',
                 'Диаметр монтажного отверстия': f'Русский ~ {mounting_hole_diameter}',
+                'Материал': f'Русский ~ {material}',
 
             })
             driver.find_element(By.XPATH, '/html/body/header/nav/div/div[2]/ul[2]/li[1]/a/span[1]').click()
             time.sleep(2)
 
-        with open('pereklyuchateli-tumblery-manipulyatory.csv', 'w', newline='', encoding='utf-8-sig') as f:
+        with open('svetosignalnaya-armatura.csv', 'w', newline='', encoding='utf-8-sig') as f:
             writer = csv.DictWriter(f, fieldnames=['URL',
                                                    'product_id',
                                                    'Русский slug',
@@ -264,12 +256,11 @@ def get_cat_html_ru():
                                                    'Русский description',
                                                    'Украинский title',
                                                    'Украинский description',
-                                                   'Тип кнопки',
-                                                   'Тип контакта',
+                                                   'Номинальное напряжение',
+                                                   'Тип источника света',
                                                    'Цвет',
-                                                   'Маркировка',
-                                                   'Наличие подсветки',
                                                    'Диаметр монтажного отверстия',
+                                                   'Материал',
                                                    ])
             writer.writeheader()
             for element in data:
