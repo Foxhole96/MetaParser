@@ -15,7 +15,7 @@ HEADERS = {
                   '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
 
-url = 'https://001.com.ua/posty-upravleniya-knopochnye'
+url = 'https://001.com.ua/kontsevye-vyklyuchateli'
 options = webdriver.ChromeOptions()
 options.add_argument('--disable-blink-features=AutomationControlled')
 options.add_argument(HEADERS)
@@ -154,18 +154,11 @@ def get_cat_html_ru():
             except AttributeError:
                 sku = 'ERROR'
 
-            device_type = test_pars(soup=soup, name='Тип')
-            if 'O-I' in device_type:
-                device_type = device_type
-            else:
-                device_type = device_type.capitalize()
-            signal_lamp = test_pars(soup=soup, name='Наличие сигнальной лампы')
-            if signal_lamp == 'есть (LED)':
-                signal_lamp = 'Есть (LED)'
-            else:
-                signal_lamp = signal_lamp.capitalize()
+            device_type = test_pars_capitalize(soup=soup, name='Тип устройства')
+            drive_type = test_pars_capitalize(soup=soup, name='Тип привода')
+            nominal_current = test_pars_capitalize(soup=soup, name='Номинальный ток (при 220 В AC), А')
+            nominal_voltage = test_pars(soup=soup, name='Номинальное напряжение, В')
             type_of_contacts = test_pars(soup=soup, name='Тип контактов')
-
 
 
             try:
@@ -221,7 +214,7 @@ def get_cat_html_ru():
                 'Украинский slug': '',
                 'images': images_str,
                 'item_name': title,
-                'category_name': 'Посты управления кнопочные',
+                'category_name': 'Концевые выключатели',
                 'manufacturer_name': brand,
                 'sku': sku,
                 'model': sku,
@@ -233,8 +226,10 @@ def get_cat_html_ru():
                 'Русский description': descr,
                 'Украинский title': title_ua,
                 'Украинский description': descr_ua,
-                'Тип': f'Русский ~ {device_type}',
-                'Наличие сигнальной лампы': f'Русский ~ {signal_lamp}',
+                'Тип устройства': f'Русский ~ {device_type}',
+                'Тип привода': f'Русский ~ {drive_type}',
+                'Номинальный ток (при 220 В AC)': f'Русский ~ {nominal_current}',
+                'Номинальное напряжение': f'Русский ~ {nominal_voltage}',
                 'Количество и вид контактов': f'Русский ~ {type_of_contacts}',
 
 
@@ -242,7 +237,7 @@ def get_cat_html_ru():
             driver.find_element(By.XPATH, '/html/body/header/nav/div/div[2]/ul[2]/li[1]/a/span[1]').click()
             time.sleep(2)
 
-        with open('posty-upravleniya-knopochnye.csv', 'w', newline='', encoding='utf-8-sig') as f:
+        with open('kontsevye-vyklyuchateli.csv', 'w', newline='', encoding='utf-8-sig') as f:
             writer = csv.DictWriter(f, fieldnames=['URL',
                                                    'product_id',
                                                    'Русский slug',
@@ -261,10 +256,11 @@ def get_cat_html_ru():
                                                    'Русский description',
                                                    'Украинский title',
                                                    'Украинский description',
-                                                   'Тип',
-                                                   'Наличие сигнальной лампы',
+                                                   'Тип устройства',
+                                                   'Тип привода',
+                                                   'Номинальный ток (при 220 В AC)',
+                                                   'Номинальное напряжение',
                                                    'Количество и вид контактов',
-
                                                    ])
             writer.writeheader()
             for element in data:
