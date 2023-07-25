@@ -155,8 +155,8 @@ def get_cat_html_ru():
                 sku = 'ERROR'
 
             num_of_buttons = test_pars(soup=soup, name='Количество основных кнопок')
-            functions = test_pars(soup=soup, name='Функции')
-            stop_button = test_pars(soup=soup, name='Наличие кнопки СТОП')
+            functions = test_pars_capitalize(soup=soup, name='Функции')
+            stop_button = test_pars_capitalize(soup=soup, name='Наличие кнопки СТОП')
 
 
 
