@@ -15,7 +15,7 @@ HEADERS = {
                   '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
 
-url = 'https://001.com.ua/magistralnye-kabel-kanaly-koroba?filters=412'
+url = 'https://001.com.ua/magistralnye-kabel-kanaly-koroba?filters=414'
 options = webdriver.ChromeOptions()
 options.add_argument('--disable-blink-features=AutomationControlled')
 options.add_argument(HEADERS)
@@ -214,7 +214,7 @@ def get_cat_html_ru():
                 'Украинский slug': '',
                 'images': images_str,
                 'item_name': title,
-                'category_name': 'Угол внешний',
+                'category_name': 'Заглушки',
                 'manufacturer_name': brand,
                 'sku': sku,
                 'model': sku,
@@ -235,7 +235,7 @@ def get_cat_html_ru():
             driver.find_element(By.XPATH, '/html/body/header/nav/div/div[2]/ul[2]/li[1]/a/span[1]').click()
             time.sleep(2)
 
-        with open('ugol-vneshnij.csv', 'w', newline='', encoding='utf-8-sig') as f:
+        with open('zaglushki.csv', 'w', newline='', encoding='utf-8-sig') as f:
             writer = csv.DictWriter(f, fieldnames=['URL',
                                                    'product_id',
                                                    'Русский slug',
