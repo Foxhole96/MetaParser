@@ -1,4 +1,7 @@
 import subprocess
+import requests
+import time
+
 def test_pars(soup, name):
     try:
 
@@ -48,3 +51,18 @@ def test_pars_capitalize(soup, name):
 def play_sound():
     sound_file = "/usr/share/sounds/gnome/default/alerts/drip.ogg"
 play_sound()
+
+def check_internet_connection(host_url):
+    while True:
+        try:
+            response = requests.get(host_url)
+            if response.status_code == 200:
+                print("Интернет соединение с хостом есть.")
+                break
+        except requests.ConnectionError:
+            print("Интернет соединение с хостом отсутствует. Повторная проверка через 10 секунд...")
+            time.sleep(10)
+def check_internet_and_continue():
+    check_internet_connection("https://001.com.ua/")
+    print("Продолжение выполнения скрипта...")
+    time.sleep(2)
