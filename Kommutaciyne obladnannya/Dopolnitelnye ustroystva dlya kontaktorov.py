@@ -7,7 +7,6 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-import winsound
 from tqdm import tqdm
 from Functions import *
 
@@ -79,7 +78,6 @@ def get_cat_html_ru():
             all_product_links.extend(product_urls)
         #  Збір даних про товари
         for product_url in tqdm(all_product_links, desc="Парсинг", unit="посилання"):
-            check_internet_and_continue()
             images = []
             driver.get(url=product_url)
             time.sleep(2)
@@ -274,7 +272,7 @@ def get_cat_html_ru():
 
 
 def main():
-    check_internet_and_continue()
+
     product_data = get_cat_html_ru()
     play_sound()
 
