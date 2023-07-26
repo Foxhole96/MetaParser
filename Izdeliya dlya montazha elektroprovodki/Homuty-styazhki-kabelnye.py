@@ -157,11 +157,6 @@ def get_cat_html_ru():
             if lenth == '0':
                 lenth = ''
 
-            if width == '' or lenth == '':
-                size = ''
-            else:
-                size = f'{width}х{lenth} мм'
-
 
             if 'упаковка' in title:
                 count = title.split('(')[1]
@@ -240,7 +235,8 @@ def get_cat_html_ru():
                 'Украинский title': title_ua,
                 'Украинский description': descr_ua,
                 'Тип оборудования': f'Русский ~ {device_type}',
-                'Размеры': f'Русский ~ {size}',
+                'Ширина мм': f'Русский ~ {width}',
+                'Длина мм': f'Русский ~ {lenth}',
                 'В упаковке': f'Русский ~ {count}',
                 'Цвет товара': f'Русский ~ {color}',
 
@@ -271,7 +267,8 @@ def get_cat_html_ru():
                                                    'Украинский title',
                                                    'Украинский description',
                                                    'Тип оборудования',
-                                                   'Размеры',
+                                                   'Ширина мм',
+                                                   'Длина мм',
                                                    'В упаковке',
                                                    'Цвет товара',
 

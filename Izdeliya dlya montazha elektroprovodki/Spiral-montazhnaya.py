@@ -15,7 +15,7 @@ HEADERS = {
                   '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
 
-url = 'https://001.com.ua/skoby-plastikovye'
+url = 'https://001.com.ua/spiral-montazhnaya'
 options = webdriver.ChromeOptions()
 options.add_argument('--disable-blink-features=AutomationControlled')
 options.add_argument(HEADERS)
@@ -149,22 +149,9 @@ def get_cat_html_ru():
             except AttributeError:
                 sku = 'ERROR'
 
-            device_type = test_pars_capitalize(soup=soup, name='Тип')
-            width = test_pars_capitalize(soup=soup, name='Ширина, мм')
-            if 'упаковка' in title:
-                count = title.split('(')[1]
-                count = f'{count.split(" ")[1]}шт'
-            else:
-                count = ''
 
-            if 'черный' in title:
-                color = 'Черный'
-            else:
-                color = 'Белый'
-
-            print(count)
-
-
+            size = test_pars(soup=soup, name='Диаметр обвязываемого жгута, мм')
+            color = test_pars_capitalize(soup=soup, name='Цвет')
 
             #         Опис товару
 
@@ -220,7 +207,7 @@ def get_cat_html_ru():
                 'Украинский slug': '',
                 'images': images_str,
                 'item_name': title,
-                'category_name': 'Скобы для крепления кабеля',
+                'category_name': 'Спираль монтажная',
                 'manufacturer_name': brand,
                 'sku': sku,
                 'model': sku,
@@ -232,17 +219,18 @@ def get_cat_html_ru():
                 'Русский description': descr,
                 'Украинский title': title_ua,
                 'Украинский description': descr_ua,
-                'Тип оборудования': f'Русский ~ {device_type}',
-                'Ширина мм': f'Русский ~ {width}',
-                'В упаковке': f'Русский ~ {count}',
-                'Цвет': f'Русский ~ {color}',
+                'Тип оборудования': f'Русский ~ Спираль монтажная',
+                'Диаметр обвязываемого жгута': f'Русский ~ {size}',
+                'Цвет товара': f'Русский ~ {color}',
+
+
 
 
             })
             driver.find_element(By.XPATH, '/html/body/header/nav/div/div[2]/ul[2]/li[1]/a/span[1]').click()
             time.sleep(2)
 
-        with open('skoby-plastikovye.csv', 'w', newline='', encoding='utf-8-sig') as f:
+        with open('spiral-montazhnaya.csv', 'w', newline='', encoding='utf-8-sig') as f:
             writer = csv.DictWriter(f, fieldnames=['URL',
                                                    'product_id',
                                                    'Русский slug',
@@ -262,9 +250,11 @@ def get_cat_html_ru():
                                                    'Украинский title',
                                                    'Украинский description',
                                                    'Тип оборудования',
-                                                   'Ширина мм',
-                                                   'В упаковке',
-                                                   'Цвет'
+                                                   'Диаметр обвязываемого жгута',
+                                                   'Цвет товара',
+
+
+
 
 
                                                    ])
