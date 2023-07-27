@@ -78,7 +78,7 @@ def get_cat_html_ru():
             all_product_links.extend(product_urls)
         #  Збір даних про товари
         for product_url in tqdm(all_product_links, desc="Парсинг", unit="посилання"):
-            check_internet_and_continue()
+
             images = []
             driver.get(url=product_url)
             time.sleep(2)
@@ -256,7 +256,7 @@ def get_cat_html_ru():
                                                    'Русский description',
                                                    'Украинский title',
                                                    'Украинский description',
-                                                   'Размер короба',
+                                                   'Размер',
                                                    'Цвет товара',
                                                    ])
             writer.writeheader()
