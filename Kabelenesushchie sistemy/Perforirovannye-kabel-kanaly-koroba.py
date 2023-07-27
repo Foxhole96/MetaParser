@@ -228,9 +228,9 @@ def get_cat_html_ru():
                 'Русский description': descr,
                 'Украинский title': title_ua,
                 'Украинский description': descr_ua,
-                'Ширина': f'Русский ~ {width}',
-                'Высота': f'Русский ~ {height}',
-                'Длина': f'Русский ~ {length_mm}',
+                'Ширина мм': f'Русский ~ {width}',
+                'Высота мм': f'Русский ~ {height}',
+                'Длина мм': f'Русский ~ {length_mm}',
                 'Цвет товара': f'Русский ~ {color}',
 
 
@@ -258,9 +258,9 @@ def get_cat_html_ru():
                                                    'Русский description',
                                                    'Украинский title',
                                                    'Украинский description',
-                                                   'Ширина',
-                                                   'Высота',
-                                                   'Длина',
+                                                   'Ширина мм',
+                                                   'Высота мм',
+                                                   'Длина мм',
                                                    'Цвет товара',
                                                    ])
             writer.writeheader()

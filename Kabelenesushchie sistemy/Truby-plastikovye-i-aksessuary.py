@@ -227,7 +227,7 @@ def get_cat_html_ru():
                 'Украинский title': title_ua,
                 'Украинский description': descr_ua,
                 'Тип': f'Русский ~ {device_type}',
-                'Диаметр': f'Русский ~ {diametr}',
+                'Внешний диаметр трубы': f'Русский ~ {diametr}',
             })
             driver.find_element(By.XPATH, '/html/body/header/nav/div/div[2]/ul[2]/li[1]/a/span[1]').click()
             time.sleep(2)
@@ -252,7 +252,7 @@ def get_cat_html_ru():
                                                    'Украинский title',
                                                    'Украинский description',
                                                    'Тип',
-                                                   'Диаметр',
+                                                   'Внешний диаметр трубы',
 
                                                    ])
             writer.writeheader()

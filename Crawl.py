@@ -46,6 +46,30 @@ def get_items(url):
     except AttributeError:
         h1 = 'ERROR'
 
+
+    # Вигрузка ссилок для всіх категорій з меню
+
+#    try:
+#        all_cat_links_list = soup.find_all('a', class_='catalog_link__c1eYd catalog_linkLeafs__eHr9S')
+#
+#        cat_link_list = []
+#
+#        for cat_link in all_cat_links_list:
+#            cat_link = f"https://e-server.com.ua{cat_link.get('href')}"
+#            cat_link_list.append(cat_link)
+#
+#            print(cat_link)
+#    except AttributeError:
+#        cat_link_list = []
+
+    try:
+        atr = soup.find('div', string='Переріз кабелю')
+        if atr:
+            atr = 'KUUURWAAA'
+        else:
+            atr = 'ERROR'
+    except AttributeError:
+        atr = 'ERROR'
     # Вигрузка всіх товарів зі сторінки
     # try:
     #     pr_links = soup.find('div', class_='flex flex-wrap max-w-full mx-3 xl:max-w-max xl:mx-0'
@@ -188,11 +212,13 @@ def get_items(url):
         # 'iframe_check': iframe_check,
         'product_id': product_id,
         'sku': sku,
+        'atr': atr
         # 'stock_status': stock_status,
 
     })
+    print(url)
 
-    print(url, product_id, sku)
+
     return metas
 
 
@@ -200,14 +226,14 @@ def main():
     open_list()
 
     metas = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
         futures = [executor.submit(get_items, url) for url in URL]
 
         for future in concurrent.futures.as_completed(futures):
             metas.extend(future.result())
 
     with open('output.csv', 'w', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=['product_id', 'h1', 'sku'])
+        writer = csv.DictWriter(f, fieldnames=['product_id', 'h1', 'sku', 'atr'])
         writer.writeheader()
         for meta in metas:
             writer.writerow(meta)

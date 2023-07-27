@@ -227,7 +227,7 @@ def get_cat_html_ru():
                 'Русский description': descr,
                 'Украинский title': title_ua,
                 'Украинский description': descr_ua,
-                'Размер короба': f'Русский ~ {size}',
+                'Размер': f'Русский ~ {size}',
                 'Цвет товара': f'Русский ~ {color}',
 
 
@@ -255,7 +255,7 @@ def get_cat_html_ru():
                                                    'Русский description',
                                                    'Украинский title',
                                                    'Украинский description',
-                                                   'Размер короба',
+                                                   'Размер',
                                                    'Цвет товара',
                                                    ])
             writer.writeheader()
