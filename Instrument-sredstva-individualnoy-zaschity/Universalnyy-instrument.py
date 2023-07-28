@@ -100,13 +100,23 @@ def get_cat_html_ru():
                 title = 'ERROR'
 
             try:
-                all_images = soup.find_all('figure', class_='image-additional')
-                main_image = soup.find('meta', attrs={'itemprop': 'image'})['content']
-                images.append(main_image)
+                title = soup.find('h1', class_='product-header').text.strip()
+            except AttributeError:
+                title = 'ERROR'
 
-                for i in all_images:
-                    image = i.find('a', class_='thumbnail').get('href')
-                    images.append(f'https://001.com.ua{image}')
+            try:
+                check_photo = soup.find('a', class_='thumbnail').get('href')
+                if check_photo == '/media/photos/no-photo-photo.jpg':
+                    all_images = ''
+                    images = ''
+                else:
+                    all_images = soup.find_all('figure', class_='image-additional')
+                    main_image = soup.find('meta', attrs={'itemprop': 'image'})['content']
+                    images.append(main_image)
+
+                    for i in all_images:
+                        image = i.find('a', class_='thumbnail').get('href')
+                        images.append(f'https://001.com.ua{image}')
             except AttributeError:
                 all_images = ''
                 images = ''
@@ -224,8 +234,8 @@ def get_cat_html_ru():
                 'Украинский description': descr_ua,
                 'Опрессовка наконечников': f'Русский ~ {crimping_tips}',
                 'Снятие изоляции': f'Русский ~ {stripping}',
-                'Резка провода до ∅,': f'Русский ~ {wire_cutting}',
-                'Резка стальной проволоки до ∅,': f'Русский ~ {steel_wire_cutting}',
+                'Резка провода до ∅': f'Русский ~ {wire_cutting}',
+                'Резка стальной проволоки до ∅': f'Русский ~ {steel_wire_cutting}',
                 'Резка винтов': f'Русский ~ {screw_cutting}',
 
             })

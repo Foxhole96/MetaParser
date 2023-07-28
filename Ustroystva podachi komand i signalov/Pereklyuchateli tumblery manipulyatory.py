@@ -154,13 +154,11 @@ def get_cat_html_ru():
             except AttributeError:
                 sku = 'ERROR'
 
-            device_type = test_pars_capitalize(soup=soup, name='Тип')
+            device_type = test_pars_capitalize(soup=soup, name='Тип переключателя')
             num_of_positions = test_pars_capitalize(soup=soup, name='Количество положений')
             type_of_contacts = test_pars_capitalize(soup=soup, name='Количество и вид контактов')
             color = test_pars_capitalize(soup=soup, name='Цвет')
-            if color == 'Хром':
-                color = 'Серый'
-            elif color == 'Прозрачный':
+            if color == 'Прозрачный':
                 color = 'Белый'
             else:
                 color = color

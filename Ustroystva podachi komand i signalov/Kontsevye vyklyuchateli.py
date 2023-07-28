@@ -158,6 +158,7 @@ def get_cat_html_ru():
             drive_type = test_pars_capitalize(soup=soup, name='Тип привода')
             nominal_current = test_pars_capitalize(soup=soup, name='Номинальный ток (при 220 В AC), А')
             nominal_voltage = test_pars(soup=soup, name='Номинальное напряжение, В')
+            nominal_voltage = nominal_voltage.replace(' В ', ' ')
             type_of_contacts = test_pars(soup=soup, name='Тип контактов')
 
 

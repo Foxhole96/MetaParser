@@ -159,11 +159,13 @@ def get_cat_html_ru():
                 device_type = device_type
             else:
                 device_type = device_type.capitalize()
+
             signal_lamp = test_pars(soup=soup, name='Наличие сигнальной лампы')
             if signal_lamp == 'есть (LED)':
                 signal_lamp = 'Есть (LED)'
             else:
                 signal_lamp = signal_lamp.capitalize()
+
             type_of_contacts = test_pars(soup=soup, name='Тип контактов')
 
 

@@ -155,6 +155,19 @@ def get_cat_html_ru():
                 sku = 'ERROR'
 
             num_of_places = test_pars_capitalize(soup=soup, name='Количество мест')
+            if num_of_places == '1':
+                num_of_places = '1 место'
+            elif num_of_places == '2':
+                num_of_places = '2 места'
+            elif num_of_places == '3':
+                num_of_places = '3 места'
+            elif num_of_places == '4':
+                num_of_places = '4 места'
+            elif num_of_places == '5':
+                num_of_places = '5 мест'
+            elif num_of_places == '6':
+                num_of_places = '6 мест'
+
             color = test_pars_capitalize(soup=soup, name='Цвет')
 
 
